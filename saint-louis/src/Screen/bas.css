@@ -369,6 +369,7 @@ p {
     border-radius: 8px 0 0 8px;
     border: none;
     padding: 0 10px;
+    outline: none;
 }
 
 .bas footer .haut .droite .input p {
