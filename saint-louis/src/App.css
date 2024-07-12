@@ -1,38 +1,348 @@
-.App {
-  text-align: center;
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+@font-face {
+  font-family: 'Work sans';
+  src: url('https://fonts.google.com/specimen/Work+Sans');
+}
+@font-face {
+  font-family: 'Playfair display';
+  src: url('https://fonts.google.com/specimen/Playfair+Display');
+}
+:root{
+  --activeMenu: #fff;
+  --unActiveMenu: #ffffff73;
+  --captionFs: 48px;
+  --text1: 20px;
+  --text3: 40px;
+  --text2: 38px;
+  --text2res: 18px;
+  --text3res: 24px;
+  --textDate: 24px;
+  --textRegularRes: 12px;
+  --captionFc: #fff;
+  --orange: #FAB020; 
+  --btnFont-size: 26px;
+  --navBackground-res: #fab120;
+  --horaireBg:#D9D9D9;
+}
+/********************************navbar****************************/
+.navbar{
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  font-family: "Work sans";
+  display: flex;
+  justify-content: space-around;
+  font-size: var(--text1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.social{
+  display: flex;
+}
+.social img{
+  width: 40px;
+  height: 40px;
+}
+nav{
+  margin-top: 2%;
+}
+.social{
+  margin-top: 1%; 
+}
+.logo{
+  margin-top: 10%; 
+}
+nav .a{
+  margin: 0 10px;
+}
+.navbar a.active{
+  color: var(--activeMenu);
+  text-decoration: overline;
+}
+.nav{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar a{
+  padding-left: 5%;
+  text-decoration: none;
+  color: var(--unActiveMenu);
+  transition: 0.5s;
+}
+.navbar a:hover{
+  color: var(--activeMenu);
+  transition: 0.5s;
+}
+.nav-btn{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--activeMenu);
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+@media only screen and (max-width: 768px){
+  nav{
+      position: fixed;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--navBackground-res);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.5s;
+      transform: translateY(-100vh);
+      z-index: 999;
+  }
+  nav .a{
+      color: var(--activeMenu);
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      font-size: 18px;
+      transition: text-decoration 0.3s;
+  }
+
+  nav .a:hover {
+      text-decoration: underline;
+  }
+  .responsive_nav{
+      transform: translateY(0);
+  }
+  .nav-btn{
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      font-size: 1.5rem;
+  }
+  .nav-close-btn{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      left: 200px;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--activeMenu);
+      font-size: 1.5rem;
+  }
+  .nav{
+    margin-left: 50%;
+  }
+  .navbar{
+      width: 410PX;
+      height: 10vh;
+  }
+  .social{
+    display: none;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/********************************headScreen**********************/
+.headScreen{
+  width: 100%;
+  height: 100vh;
+  color: var(--captionFc);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/public/screenBg.png);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  align-content: center;
+  font-size: var(--text2);
+  font-family: 'Work sans';
+}
+.headScreen .p{
+  margin-top: 7%;
+}
+.playfair-font{
+  font-size: var(--text3);
+  font-family: 'Playfair display';
+}
+.top-button{
+  width: 300px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: var(--orange);
+  font-family: 'Playfair display';
+  color: var(--activeMenu);
+  border: none;
+  font-size: var(--btnFont-size);
+  text-align: center;
+  align-items: center;
+  margin-top: 4%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px){
+  .headScreen .p{
+    font-size: var(--text2res);
+  }
+  .headScreen .playfair-font{
+    font-size: var(--text3res);
+  }
+  .top-button{
+    width: 200px;
+    height: 50px;
+    font-size: var(--text2res);
+  }
+}
+/********************************paroisse****************************/
+.paroisse{
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%
+}
+.paroisse h2{
+  margin-left: 3%;
+  font-size: var(--text2);
+}
+.card-container{
+ max-width: 95%;
+  height: 30vh;
+  margin-left: 2%;
+  margin-top: 5%;
+  flex-wrap: wrap;
+}
+.cards{
+  width: 100px;
+  height: fit-content;
+  display: flex!important;
+  flex-direction: row;
+  padding: 9%;
+  box-shadow: 5px 3px 7px 3px  rgba(97, 95, 95, 0.5);
+}
+.card-image{
+  width: 90px;
+  height: 90px;
+}
+.id-church{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 5%;
+  margin-left: 2%;
+}
+.id-church h3{
+  color: var(--orange);
+}
+.slick-slide > div{
+  margin: 0 10px;
+  height: 170px;
+}
+.slick-prev, .slick-next {
+   color: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+@media only screen and (max-width: 768px){
+  .paroisse h2{
+    font-size: var(--text2res);
+  }
+}
+/*************************horaires********************************/
+.horaire{
+  margin-top: 5%;
+  font-family: 'Work sans';
+}
+.horaire .h{
+  font-size: var(--text2);
+  letter-spacing: 0.5rem;
+}
+.horaire p,.horaire h2{
+  text-align: center;
+}
+.horaire > p{
+  word-spacing: 0.5rem;
+  font-size: var(--text1);
+}
+.heures{
+  width: 100%;
+  height: 50vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
 }
-
-.App-link {
-  color: #61dafb;
+.heures > div{
+  width: 40%;
+  height:  40vh;
+  margin-top: 5%;
+  border: 1px solid transparent;
+  background-color: var(--horaireBg);
+  border-radius: 20px;
+  text-align: center;
+  align-content: center;
+  line-height: 35px;
+  padding: 2%;
 }
+.underline{
+  width: 70px;
+  height: 3px;
+  background-color: var(--orange);
+  border-radius: 20px;
+  margin-left: 43%;
+}
+hr{
+  width: 80%;
+  margin-left: 10%;
+  color: var(--unActiveMenu);
+}
+.heures .date{
+  color: var(--activeMenu);
+  font-family: 'Work sans';
+  letter-spacing: 0.1rem;
+  font-size: var(--textDate);
+}
+@media only screen and (max-width: 768px){
+  .heures{
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .horaire{
+    padding: 2%;
+  }
+  .horaire .h{
+    font-size: var(--text2res);
+    letter-spacing: 0.5rem;
+  }
+  .horaire h2{
+    font-size: var(--textRegularRes);
+  }
+}
+/*******************autres info****************/
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid{
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #ceb333;
+  display: grid;
+  grid-template-areas: 'a b'
+                       'c d';
+        
+}
+.grid > div{
+  width: 50%;
+  height: 50%;
+ border: 2px solid salmon;
 }
