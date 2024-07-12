@@ -1,0 +1,35 @@
+[
+    {
+      "index": 1,
+      "image": "eglise.png",
+      "name": "Paroisse 1",
+      "location": "Situer entre bonabéri et la chatedrale union."  
+    },
+    {
+        "index": 2,
+        "image": "eglise.png",
+        "name": "Paroisse 2",
+        "location": "Situer entre bonabéri et la chatedrale union."  
+      },
+      {
+        "index": 3,
+        "image": "eglise.png",
+        "name": "Paroisse 3",
+        "location": "Situer entre bonabéri et la chatedrale union."  
+      },{
+        "index": 4,
+        "image": "eglise.png",
+        "name": "Paroisse 4",
+        "location": "Situer entre bonabéri et la chatedrale union."  
+      },{
+        "index": 5,
+        "image": "eglise.png",
+        "name": "Paroisse 5",
+        "location": "Situer entre bonabéri et la chatedrale union."  
+      },{
+        "index": 6,
+        "image": "eglise.png",
+        "name": "Paroisse 6",
+        "location": "Situer entre bonabéri et la chatedrale union."  
+      }
+]
