@@ -12,7 +12,7 @@ function App() {
       {/* <ListeEmail/> */}
       <AddEvent/>
       {/* <Bas/> */}
-      <Annonce/>
+      {/* <Annonce/> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
