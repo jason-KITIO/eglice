@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Horaires=()=>{
   return (
-    <div className='horaire'>
+    <div className='horaire' id='about'>
         <h2 className='h'>HORAIRES DES MESSES</h2>
         <p>Nous disposons de messe en français et en anglais programmer à la <br/>même heure</p>
         <div className='heures'>

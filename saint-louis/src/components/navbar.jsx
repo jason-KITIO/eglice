@@ -68,11 +68,11 @@ export const Navbar=()=>{
                 </Link>
 
                 <Link
-                    to="services"
+                    to="annonce"
                     smooth={true}
                     duration={100}
                     onClick={handleLinkClick}
-                    className={`a ${activeSection === 'services' ? 'active' : ''}`}
+                    className={`a ${activeSection === 'annonce' ? 'active' : ''}`}
                 >
                 Events
                 </Link>
