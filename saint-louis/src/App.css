@@ -34,7 +34,7 @@
   height: 10vh;
   z-index: 1;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   font-family: "Work sans";
   display: flex;
   justify-content: space-around;
@@ -307,6 +307,9 @@ hr{
   font-size: var(--textDate);
 }
 @media only screen and (max-width: 768px){
+  .horaire{
+    margin-top: -10%;
+  }
   .heures{
     width: 100%;
     height: fit-content;
@@ -314,6 +317,19 @@ hr{
     align-items: center;
     display: flex;
     flex-direction: column;
+  }
+  .heures > div{
+    width: 80%;
+  }
+  .underline{
+    width: 70px;
+    height: 3px;
+    background-color: var(--orange);
+    border-radius: 20px;
+    margin-left: 37%;
+  }
+  .horaire > p{
+    word-spacing: 0rem;
   }
   .horaire{
     padding: 2%;
@@ -327,6 +343,14 @@ hr{
   }
 }
 /*******************autres info****************/
+.informations{
+  margin-top: 5%;
+  font-family: 'Work sans';
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+  font-size: 14px;
+}
 .a { grid-area: a; }
 .b { grid-area: b; }
 .c { grid-area: c; }
@@ -334,15 +358,63 @@ hr{
 
 .grid{
   width: 100%;
-  height: 100vh;
-  border: 1px solid #ceb333;
+  height: 120vh;
   display: grid;
   grid-template-areas: 'a b'
                        'c d';
         
 }
 .grid > div{
-  width: 50%;
-  height: 50%;
- border: 2px solid salmon;
+ padding: 5%;
 }
+.b, .c{
+  background-color: var(--horaireBg);
+}
+.informations h2{
+ margin-bottom: 5%;
+ margin-left: 5%;
+ font-size: var(--text2);
+}
+.c, .d{
+  margin-top: 5%;
+}
+.dot-list{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--horaireBg);
+  padding-left: 5%;
+}
+.a > p, .d > p{
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px){
+  .informations{
+    margin-top: 20%;
+    height: fit-content;
+  }
+  .informations h2{
+    margin-bottom: 5%;
+    margin-left: 5%;
+    font-size: var(--text2res);
+   }
+  .grid{
+    width: 100%;
+    height: 25gftfd0vh;
+    display: grid;
+    grid-template-areas: 'a'
+                         'b'
+                         'd'
+                         'c';
+          
+  }
+  .b, .c{
+    position: relative;
+    bottom: 50%;
+  }
+  .dot-list{
+    padding-left: 8%;
+  }
+}
+
