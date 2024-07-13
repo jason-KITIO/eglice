@@ -375,17 +375,18 @@ p {
 .bas footer .haut .droite .input p {
     font-family: Poppins;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 20px;
     text-align: left;
-    background: #5856D6;
+    background-color: #FAB020;
     padding: 12px 20px;
     border-radius: 0 8px 8px 0;
+    color: #fff;
 }
 
 
 .bas footer .haut .droite .input p:hover {
-    background: #5856d669;
+    background: #FAB02069;
 }
 
 .bas footer .bas {
@@ -411,7 +412,10 @@ p {
     flex-direction: row;
     gap: 10px;
 }
-
+.button{
+    border: 0;
+    border-radius: 0 10px 10px 0;
+}
 
 @media only screen and (max-width: 767px) {
     .bas {

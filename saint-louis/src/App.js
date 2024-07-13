@@ -1,11 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
 import Bas from './Screen/bas';
+import AddEvent from './Screen/AddEvent';
+import ListeEmail from './Screen/listeEmail';
+import Annonce from './Screen/annonce';
 
 function App() {
   return (
     <div className="App">
-      <Bas/>
+
+      {/* <ListeEmail/> */}
+      <AddEvent/>
+      {/* <Bas/> */}
+      <Annonce/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
