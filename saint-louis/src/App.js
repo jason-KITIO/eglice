@@ -4,6 +4,9 @@
  origin/Jason_KITIO
 import './App.css';
 import Bas from './Screen/bas';
+import AddEvent from './Screen/AddEvent';
+import ListeEmail from './Screen/listeEmail';
+import Annonce from './Screen/annonce';
 
 import { HeadScreen } from './components/headScreen';
 import { Navbar } from './components/navbar';
@@ -15,6 +18,7 @@ function App() {
   return (
     <div className="App">
  HEAD
+ HEAD
       <Navbar/>
       <HeadScreen/>
       <Paroisse/>
@@ -22,6 +26,13 @@ function App() {
       <Information/>
 
       <Bas/>
+=======
+
+      {/* <ListeEmail/> */}
+      <AddEvent/>
+      {/* <Bas/> */}
+      <Annonce/>
+     origin/Jason_KITIO
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

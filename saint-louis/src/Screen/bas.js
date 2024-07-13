@@ -7,7 +7,8 @@ import instagram from '../pictures/instagram.svg';
 import facebook from '../pictures/facebook.svg';
 import Ellipse from '../pictures/Ellipse.svg';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Cart({ nom, photo, role }) {
     const [isHovered, setIsHovered] = useState(false);
@@ -68,6 +69,56 @@ function Block({ photo, titre, sousTitre }) {
     )
 }
 function Bas() {
+    const [emails, setEmails] = useState([]);
+    const [newEmail, setNewEmail] = useState('');
+
+    useEffect(() => {
+        const fetchEmails = async () => {
+            try {
+                const response = await axios.get('http://localhost:8081/emails');
+                setEmails(response.data);
+            } catch (error) {
+                console.error('Error fetching emails:', error);
+            }
+        };
+
+        fetchEmails();
+    }, []);
+
+    const handleInputChange = (e) => {
+        setNewEmail(e.target.value);
+    };
+
+    const handleAddEmail = async () => {
+        if (newEmail.trim() === '') {
+            alert('Please enter an email address.');
+            return;
+        }
+
+        try {
+            await axios.post('http://localhost:8081/signup', { email: newEmail });
+            setNewEmail('');
+            const response = await axios.get('http://localhost:8081/emails');
+            setEmails(response.data);
+        } catch (error) {
+            console.error('Error adding email:', error);
+        }
+    };
+
+
+    const [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/events')
+            .then(response => {
+                setEvents(response.data);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des événements :', error);
+            });
+    }, []);
+
+
     return (
         <div className="bas">
             <Titre titre='NOTRE PERSONNELLES' sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
@@ -88,12 +139,15 @@ function Bas() {
                 <img src={svg} />
                 <p>ANNONCES</p>
             </div>
-            <div className='annonce-block'>
-                <Block photo={logo} titre={'TITRE'} sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
-                <Block photo={logo} titre={'TITRE'} sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
-                <Block photo={logo} titre={'TITRE'} sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
-                <Block photo={logo} titre={'TITRE'} sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
-                <Block photo={logo} titre={'TITRE'} sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
+            <div className='annonce-block' id='annonce'>
+                {events.map(event => (
+                    <Block
+                        key={event.id}
+                        photo={Ellipse}
+                        titre={event.title}
+                        sousTitre={event.description}
+                    />
+                ))}
             </div>
             <footer>
                 <div className='haut'>
@@ -113,8 +167,12 @@ function Bas() {
                         <p>Join Our Newsletter</p>
                         <span>Be the first to know about our latest updates, exclusive offers, and more.</span>
                         <div className='input'>
-                            <input type='text' placeholder='Enter your email'/>
-                            <p>Subscribe</p>
+                            <input type="email" placeholder='Your email' value={newEmail} onChange={handleInputChange} />
+                            <button className="button" onClick={handleAddEmail}><p>
+                                Subscribe
+                            </p>
+                            </button>
+
                         </div>
                     </div>
                 </div>
