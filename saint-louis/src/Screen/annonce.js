@@ -7,7 +7,7 @@ import axios from 'axios';
 function Block({ photo, titre, sousTitre }) {
     return (
         <div className='block'>
-            <img src={photo} />
+            <img src={photo} alt='' />
             <p>{titre}</p>
             <span>{sousTitre}</span>
         </div>

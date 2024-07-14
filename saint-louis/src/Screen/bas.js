@@ -20,7 +20,7 @@ function Cart({ nom, photo, role }) {
         >
             {!isHovered ? (
                 <div className="initial-div">
-                    <img src={photo} />
+                    <img src={photo} alt=''/>
                     <div>
                         <p>{nom}</p>
                         <span>{role}</span>
