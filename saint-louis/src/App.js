@@ -1,15 +1,18 @@
+<<<<<<< HEAD
  import './App.css';
 import Bas from './Screen/bas';
 
+=======
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route ,Routes} from 'react-router-dom';
+import { Home } from './Screen/home';
+ import { Announces } from './Screen/Announces';
+>>>>>>> routes-test
 
-import { HeadScreen } from './components/headScreen';
-import { Navbar } from './components/navbar';
-import { Paroisse } from './components/nosParoisse';
-import { Horaires } from './components/horaires';
-import { Information } from './components/information';
-
-function App() {
+const App=()=> { 
   return (
+<<<<<<< HEAD
     <div className="App">
       <Navbar/>
       <HeadScreen/>
@@ -33,6 +36,16 @@ function App() {
       </header> */}
     </div>
   );
+=======
+      <Router>
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/announces" element={ <Announces /> } /> 
+          {/* Add more routes here */}
+        </Routes>
+      </Router>
+  )
+>>>>>>> routes-test
 }
 
 export default App;

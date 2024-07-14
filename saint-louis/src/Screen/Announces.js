@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 
 import { Navbar } from '../components/navbar'
 import { Screen } from '../components/screen'
@@ -23,6 +24,15 @@ export const Announces=()=> {
             </div>
         <Annonce/>
         <Bas/>
+=======
+import { Link } from "react-router-dom"
+
+export const Announces=()=> {
+    
+  return (
+    <div>
+       <Link to='/' className="home">Home</Link>
+>>>>>>> routes-test
     </div>
   )
 }
