@@ -1,8 +1,4 @@
  import './App.css';
-<<<<<<< HEAD
-=======
-
->>>>>>> second-page
 import Bas from './Screen/bas';
 import AddEvent from './Screen/AddEvent';
 import ListeEmail from './Screen/listeEmail';
@@ -39,7 +35,6 @@ function App() {
           Learn React
         </a>
       </header> */}
-cond-page
     </div>
   );
 }
