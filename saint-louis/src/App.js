@@ -1,8 +1,4 @@
- HEAD
-
-// import logo from './logo.svg';
- origin/Jason_KITIO
-import './App.css';
+ import './App.css';
 import Bas from './Screen/bas';
 import AddEvent from './Screen/AddEvent';
 import ListeEmail from './Screen/listeEmail';
@@ -17,8 +13,7 @@ import { Information } from './components/information';
 function App() {
   return (
     <div className="App">
- HEAD
- HEAD
+
       <Navbar/>
       <HeadScreen/>
       <Paroisse/>
@@ -26,13 +21,6 @@ function App() {
       <Information/>
 
       <Bas/>
-=======
-
-      {/* <ListeEmail/> */}
-      <AddEvent/>
-      {/* <Bas/> */}
-      <Annonce/>
-     origin/Jason_KITIO
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -47,7 +35,7 @@ function App() {
           Learn React
         </a>
       </header> */}
- origin/Jason_KITIO
+
     </div>
   );
 }
