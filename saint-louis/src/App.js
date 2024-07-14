@@ -1,10 +1,6 @@
  import './App.css';
 import Bas from './Screen/bas';
-import AddEvent from './Screen/AddEvent';
-import ListeEmail from './Screen/listeEmail';
-import Annonce from './Screen/annonce';
 
-import { Announces } from './Screen/Announces';
 
 import { HeadScreen } from './components/headScreen';
 import { Navbar } from './components/navbar';

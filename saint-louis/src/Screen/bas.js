@@ -121,7 +121,7 @@ function Bas() {
 
     return (
         <div className="bas">
-            <Titre titre='NOTRE PERSONNELLES' sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
+            <Titre titre='NOTRE PERSONNELLES'  className='Titre' sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
             <div className='cart'>
                 <Cart nom="Abbé Bienvenu SONNA" photo={logo} role="VICAIRE" />
                 <Cart nom="Abbé Paul Claver NOA NTEME" photo={logo} role="VICAIRE" />

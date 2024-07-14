@@ -144,6 +144,7 @@
     flex-direction: row;
     gap: 20px;
     margin: 0 20px;
+    margin-left: 10%;
 
     width: 90vw;
     position: sticky;
@@ -416,6 +417,7 @@ p {
     border: 0;
     border-radius: 0 10px 10px 0;
 }
+
 
 @media only screen and (max-width: 767px) {
     .bas {
