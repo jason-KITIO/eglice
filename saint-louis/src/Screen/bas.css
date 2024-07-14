@@ -145,12 +145,11 @@
     flex-direction: row;
     gap: 20px;
     margin: 0 20px;
+
     width: 90vw;
     position: sticky;
     overflow-x: auto;
     scrollbar-width: none;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -282,7 +281,7 @@ p {
     font-weight: 600;
     line-height: 37.34px;
     letter-spacing: 0.1em;
-    text-align: left;
+    text-align: center;
 }
 
 .block span {

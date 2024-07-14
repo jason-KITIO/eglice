@@ -13,7 +13,7 @@ function Block({ photo, titre, sousTitre }) {
         </div>
     )
 }
-function Annonce() {
+export const Annonce=()=> {
     const [eventsByDate, setEventsByDate] = useState({});
 
     useEffect(() => {
@@ -56,4 +56,3 @@ function Annonce() {
     )
 }
 
-export default Annonce;

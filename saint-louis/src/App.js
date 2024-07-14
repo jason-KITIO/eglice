@@ -1,18 +1,27 @@
-// import logo from './logo.svg';
 import './App.css';
 import Bas from './Screen/bas';
 import AddEvent from './Screen/AddEvent';
 import ListeEmail from './Screen/listeEmail';
 import Annonce from './Screen/annonce';
 
+import { Announces } from './Screen/Announces';
+
+import { HeadScreen } from './components/headScreen';
+import { Navbar } from './components/navbar';
+import { Paroisse } from './components/nosParoisse';
+import { Horaires } from './components/horaires';
+import { Information } from './components/information';
 function App() {
   return (
     <div className="App">
-
+      <Navbar />
+      <HeadScreen />
+      <Paroisse />
+      <Horaires />
+      <Information />
+      <Bas />
       {/* <ListeEmail/> */}
-      <AddEvent/>
-      {/* <Bas/> */}
-      {/* <Annonce/> */}
+      {/* <AddEvent/> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
