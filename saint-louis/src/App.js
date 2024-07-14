@@ -1,8 +1,14 @@
  import './App.css';
+<<<<<<< HEAD
+=======
+
+>>>>>>> second-page
 import Bas from './Screen/bas';
 import AddEvent from './Screen/AddEvent';
 import ListeEmail from './Screen/listeEmail';
 import Annonce from './Screen/annonce';
+
+import { Announces } from './Screen/Announces';
 
 import { HeadScreen } from './components/headScreen';
 import { Navbar } from './components/navbar';
@@ -13,13 +19,11 @@ import { Information } from './components/information';
 function App() {
   return (
     <div className="App">
-
       <Navbar/>
       <HeadScreen/>
       <Paroisse/>
       <Horaires/>
       <Information/>
-
       <Bas/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -35,7 +39,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-
+cond-page
     </div>
   );
 }

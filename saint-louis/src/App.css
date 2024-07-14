@@ -49,10 +49,10 @@
   height: 40px;
 }
 nav{
-  margin-top: 2%;
+  margin-top: 5%;
 }
 .social{
-  margin-top: 1%; 
+  margin-top: 3%; 
 }
 .logo{
   margin-top: 10%; 
@@ -417,4 +417,56 @@ hr{
     padding-left: 8%;
   }
 }
-
+/*****************************************second-page Screen**************************/
+.Screen{
+  width: 100%;
+  height: 90vh;
+  color: var(--captionFc);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/public/screenBg2.png);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  align-content: center;
+  font-size: var(--text2);
+  font-family: 'Work sans';
+}
+.Screen .p{
+  margin-top: 7%;
+}
+.playfair-font{
+  font-size: var(--text3);
+  font-family: 'Playfair display';
+}
+.top-button{
+  width: 300px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: var(--orange);
+  font-family: 'Playfair display';
+  color: var(--activeMenu);
+  border: none;
+  font-size: var(--btnFont-size);
+  text-align: center;
+  align-items: center;
+  margin-top: 4%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px){
+  .Screen{
+    margin-bottom: 15%;
+  }
+  .Screen .p{
+    font-size: var(--text2res);
+  }
+  .Screen .playfair-font{
+    font-size: var(--text3res);
+  }
+  .top-button{
+    width: 200px;
+    height: 50px;
+    font-size: var(--text2res);
+  }
+}
