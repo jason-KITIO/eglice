@@ -9,7 +9,6 @@ import { Paroisse } from '../components/nosParoisse';
 import { Horaires } from '../components/horaires';
 import { Information } from '../components/information';
 
-import { Link } from 'react-router-dom';
 
 
 export const Home=()=>{
@@ -17,8 +16,6 @@ export const Home=()=>{
     <div className="home">
       <Navbar/>
       <HeadScreen/>
-      <h1>Home page</h1>
-      <Link to="/announces">Go to About</Link>
       <Paroisse/>
       <Horaires/>
       <Information/>
