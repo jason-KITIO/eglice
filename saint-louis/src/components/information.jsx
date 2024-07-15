@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export const Information=()=>{
   return (
     <div className='informations'>
@@ -11,8 +12,12 @@ export const Information=()=>{
                         <p><div className='dot-list'></div>&nbsp;Les mariages nécessitent une préparation minimale de trois mois. Pour les formalités, veuillez consulter le secrétariat.</p><br/>
                     </div>
 
-                    <div className='b'></div>
-                    <div className='c'></div>
+                    <div className='b'>
+                       {/* <img src="" alt=''/> */}
+                    </div>
+                    <div className='c'>
+                      {/* <img src="" alt=''/> */}
+                    </div>
                     <div className='d'>
                         <h4>Visites des Malades et Confessions :</h4><br />
                         <p> <div className='dot-list'></div>&nbsp;Pour les visites des malades, veuillez consulter le secrétariat pour programmer un rendez-vous avec le prêtre</p><br/>
