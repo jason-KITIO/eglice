@@ -414,10 +414,9 @@ hr{
    }
   .grid{
     width: 100%;
-<<<<<<< HEAD
-=======
+
     height: fit-content;
->>>>>>> 3f9c228a7d1dbb49d3f80f65df69d011c9eaa041
+
     display: grid;
     grid-template-areas: 'a'
                          'b'
