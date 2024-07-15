@@ -252,6 +252,8 @@ p {
     background: #D9D9D9;
     padding: 10px;
     border-radius: 20px;
+
+    justify-content: space-around;
 }
 
 .annonce-block {
@@ -415,7 +417,8 @@ p {
     flex-direction: row;
     gap: 10px;
 }
-.button{
+
+.button {
     border: 0;
     border-radius: 0 10px 10px 0;
 }
@@ -433,7 +436,7 @@ p {
     .bas .cart {
         flex-direction: column;
         align-items: center;
-        
+
     }
 
     .image {
@@ -469,5 +472,10 @@ p {
         flex-direction: column;
         padding-bottom: 0;
         gap: 10px;
+    }
+
+    .annonce-block {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

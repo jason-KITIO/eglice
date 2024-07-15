@@ -1,5 +1,6 @@
 .date-group {
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
+    width: min-content;
 }
 
 .date-group h2 {
@@ -27,3 +28,7 @@
     }
 }
   
+.annonce-block-autre{
+    flex-wrap: wrap;
+    justify-content: center;
+}

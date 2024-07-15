@@ -35,7 +35,7 @@ export const Annonce=()=> {
     }, []);
     return (
         <div>
-            <div className='annonce-block' id='annonce'>
+            <div className='annonce-block annonce-block-autre' id='annonce'>
                 {Object.entries(eventsByDate).map(([date, events]) => (
                     <div key={date} className='date-group'>
                         <h2>{date}</h2>

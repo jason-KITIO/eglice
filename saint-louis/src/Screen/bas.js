@@ -20,7 +20,7 @@ function Cart({ nom, photo, role }) {
         >
             {!isHovered ? (
                 <div className="initial-div">
-                    <img src={photo} alt=''/>
+                    <img src={photo} alt='' />
                     <div>
                         <p>{nom}</p>
                         <span>{role}</span>
@@ -121,7 +121,7 @@ function Bas() {
 
     return (
         <div className="bas">
-            <Titre titre='NOTRE PERSONNELLES'  className='Titre' sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
+            <Titre titre='NOTRE PERSONNELLES' className='Titre' sousTitre={'Nous remercions notre personnel pour son travail et son denouement que le seigneur veils sur nous.'} />
             <div className='cart'>
                 <Cart nom="Abbé Bienvenu SONNA" photo={logo} role="VICAIRE" />
                 <Cart nom="Abbé Paul Claver NOA NTEME" photo={logo} role="VICAIRE" />
@@ -136,11 +136,11 @@ function Bas() {
                 <ImageOverlay Photo={logo} texte={'Abbé Micheal Auguste TCHOUMBOU'} sousTexte={'Curé et Vicaire Episcopal'} />
             </div>
             <div className='annonce'>
-                <img src={svg}  alt=''/>
+                <img src={svg} alt='' />
                 <p>ANNONCES</p>
             </div>
             <div className='annonce-block' id='annonce'>
-                {events.map(event => (
+                {events.slice(0, 4).map(event => (
                     <Block
                         key={event.id}
                         photo={Ellipse}
@@ -159,8 +159,8 @@ function Bas() {
                             <p>Legal</p>
                         </div>
                         <div>
-                            <img src={facebook} alt=''/>
-                            <img src={instagram} alt=''/>
+                            <img src={facebook} alt='' />
+                            <img src={instagram} alt='' />
                         </div>
                     </div>
                     <div className='droite'>
